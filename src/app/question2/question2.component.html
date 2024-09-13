@@ -1,0 +1,22 @@
+<div>
+    <h1>{{ title }}</h1>
+    <p [ngStyle]="{'color': textColor, 'background-color': backgroundColor, 'font-size': fontSize}">
+      This is a dynamically styled paragraph using NgStyle directive.
+    </p>
+  
+    <div>
+      <label for="textColor">Text Color:</label>
+      <input type="text" id="textColor" (input)="changeTextColor($event)" placeholder="e.g., red">
+    </div>
+  
+    <div>
+      <label for="bgColor">Background Color:</label>
+      <input type="text" id="bgColor" (input)="changeBackgroundColor($event)" placeholder="e.g., yellow">
+    </div>
+  
+    <div>
+      <label for="fontSize">Font Size (px):</label>
+      <input type="number" id="fontSize" (input)="changeFontSize($event)" placeholder="e.g., 24">
+    </div>
+  </div>
+  

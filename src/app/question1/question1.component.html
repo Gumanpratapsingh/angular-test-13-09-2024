@@ -1,0 +1,18 @@
+<p>question1 works!</p>
+<div class="topnav">
+    <a href="#" (click)="onClickHome()">Home</a>
+    <a href="#" (click)="onClickService()">Service</a>
+    <a href="#" (click)="onClickContact()">Contact</a>
+</div>
+
+<div [ngClass]="{ 'home-bg': isHome, 'service-bg': isService, 'contact-bg': isContact }" style="padding-left:16px">
+    <div *ngIf="isHome">
+        <h2>In Home Page</h2>
+    </div>
+    <div *ngIf="isService">
+        <h2>In Service Page</h2>
+    </div>
+    <div *ngIf="isContact">
+        <h2>In Contact Page</h2>
+    </div>
+</div>
